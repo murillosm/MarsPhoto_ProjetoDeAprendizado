@@ -10,18 +10,14 @@ import com.example.android.marsphotos.network.MarsPhoto
 import com.example.android.marsphotos.overview.MarsApiStatus
 import com.example.android.marsphotos.overview.PhotoGridAdapter
 
-/**
- * Updates the data shown in the [RecyclerView].
- */
+//Atualiza os dados mostrados no [RecyclerView].
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsPhoto>?) {
     val adapter = recyclerView.adapter as PhotoGridAdapter
     adapter.submitList(data)
 }
 
-/**
- * Uses the Coil library to load an image by URL into an [ImageView]
- */
+//Usa a biblioteca Coil para carregar uma imagem por URL em um [ImageView]
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
     imgUrl?.let {
@@ -33,6 +29,10 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
     }
 }
 
+//Este adaptador de ligação exibe o [MarsApiStatus] da solicitação de rede em uma exibição de imagem. Quando
+//a solicitação está carregando, exibe uma loading_animation. Se a requisição tiver um erro,
+//exibe uma imagem quebrada para refletir o erro de conexão. Quando o pedido é finalizado, ele
+//esconde a visualização da imagem.
 @BindingAdapter("marsApiStatus")
 fun bindStatus(statusImageView: ImageView, status: MarsApiStatus) {
     when (status) {
