@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import com.example.android.marsphotos.databinding.FragmentOverviewBinding
 
 /**
- * This fragment shows the the status of the Mars photos web services transaction.
+ * Este fragmento mostra o status da transação de serviços da Web de fotos de Marte.
  */
 class OverviewFragment : Fragment() {
 
