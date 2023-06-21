@@ -16,6 +16,7 @@
 
 package com.example.android.marsphotos
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -39,14 +40,17 @@ class MainActivity : AppCompatActivity() {
      override fun onOptionsItemSelected(item: MenuItem): Boolean {
          return when (item.itemId) {
              R.id.cambio -> {
-                 //val fragment = FragmentCambio()
-                 //replaceFragment(fragment)
+                 navigateToCambio()
                  true
              }
              else -> super.onOptionsItemSelected(item)
          }
      }
 
+     private fun navigateToCambio() {
+         val intent = Intent(this, MainActivity2::class.java)
+         startActivity(intent)
+     }
 
 
  }

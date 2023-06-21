@@ -7,4 +7,9 @@
         android:title="@string/cambio"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/marte"
+        android:title="@string/marte"
+        app:showAsAction="ifRoom" />
+
 </menu>
